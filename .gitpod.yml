@@ -1,6 +1,6 @@
 tasks:
-  - before: yarn
-  - command: yarn test:watch
+  - init: yarn
+  command: yarn test:watch
 
 vscode:
   extensions:
