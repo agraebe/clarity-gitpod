@@ -3,8 +3,9 @@ FROM gitpod/workspace-full
 USER gitpod
 
 ### Set Node.js version to 13
-USER gitpod
-ENV NODE_VERSION=13.14.0
+RUN nvm install 13.14.0
+
+RUN node -v
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
