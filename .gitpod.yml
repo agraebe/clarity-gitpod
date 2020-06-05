@@ -11,7 +11,7 @@ tasks:
   - before: nvm install 13
   - init: yarn # runs during prebuild
     command: yarn test:watch
-    command: npm run dev:integrated
+  - command: npm run dev:integrated
 
 vscode:
   extensions:
