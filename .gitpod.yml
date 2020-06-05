@@ -5,4 +5,4 @@ tasks:
 vscode:
   extensions:
     - blockstack.clarity@0.0.5:rBhb1NsIYs1/wpFyiyXNdA==
-    - lgalabru.clarity-lsp@0.2.15:NssPAIVPIZ+nmvRgVQAH9Q==
+    - lgalabru.clarity-lsp@0.2.66:NssPAIVPIZ+nmvRgVQAH9Q==
