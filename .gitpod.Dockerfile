@@ -2,6 +2,14 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+RUN nvm install 13
+
+RUN mkdir /sidecar \      
+           cd /sidecar \        
+           https://github.com/blockstack/stacks-blockchain-sidecar.git \
+           npm install \
+           npm run dev:integrated
+
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
 #

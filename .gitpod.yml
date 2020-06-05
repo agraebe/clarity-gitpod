@@ -8,9 +8,8 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: nvm install 13 && yarn
-  - command: yarn test:watch
-  - command: yarn dev:integrated
+  - init: yarn
+    command: yarn test:watch
 
 vscode:
   extensions:
