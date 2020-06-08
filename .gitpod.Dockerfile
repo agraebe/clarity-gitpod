@@ -7,11 +7,12 @@ RUN git clone https://github.com/blockstack/explorer.git
 
 # Build sources
 ENV NODE_ENV production
+RUN yarn
 RUN yarn build
 RUN yarn cache clean
 
 # Expose port 3000
 EXPOSE 3000
 
-# Run the build
+# Run build
 CMD [ "yarn", "start" ]
