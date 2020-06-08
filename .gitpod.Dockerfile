@@ -4,7 +4,7 @@ FROM gitpod/workspace-full
 USER root
 
 RUN mkdir -p ~/explorer
-RUN cd /home/explorer
+RUN cd ~/explorer
 RUN git clone https://github.com/blockstack/explorer.git
 
 # Installing dependencies
