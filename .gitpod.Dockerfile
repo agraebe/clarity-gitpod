@@ -1,8 +1,6 @@
 FROM gitpod/workspace-full
 
-# Run explorer
-USER root
-
+# Clone explorer
 RUN mkdir -p ~/explorer
 RUN cd ~/explorer
 RUN git clone https://github.com/blockstack/explorer.git
