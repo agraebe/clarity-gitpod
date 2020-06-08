@@ -6,6 +6,6 @@ vscode:
   extensions:
     - blockstack.clarity@0.0.5:rBhb1NsIYs1/wpFyiyXNdA==
     - lgalabru.clarity-lsp@0.2.66:PEBgheot/B02RfVLfwbzYg==
-    - CoenraadS.bracket-pair-colorizer-2@0.1.4:hBoqW3HGqW2+qzhFeyDp/g==
     - hbenl.vscode-test-explorer@2.19.1:GtY0wSp3pjUeyKXi8mFMnQ==
     - hbenl.vscode-mocha-test-adapter@2.5.0:tO3QPW+E2y09egEKoMFAhg==
+    - 2gua.rainbow-brackets@0.0.6:Tbu8dTz0i+/bgcKQTQ5b8g==
