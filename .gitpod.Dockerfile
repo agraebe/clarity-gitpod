@@ -12,3 +12,6 @@ RUN yarn
 
 # Running the app
 CMD [ "yarn", "dev" ]
+
+# Expose port 3000
+EXPOSE 3000
