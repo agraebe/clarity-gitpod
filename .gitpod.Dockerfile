@@ -7,7 +7,7 @@ RUN git clone https://github.com/blockstack/explorer.git
 WORKDIR /home/gitpod/explorer
 
 # Build sources
-RUN chmod 755 /home/gitpod/explorer/node_modules
+RUN chmod 755 /home/gitpod/explorer
 ENV NODE_ENV production
 RUN yarn
 RUN yarn build
