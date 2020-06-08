@@ -4,6 +4,7 @@ FROM gitpod/workspace-full
 RUN mkdir -p ~/explorer
 RUN cd ~/explorer
 RUN git clone https://github.com/blockstack/explorer.git
+WORKDIR ~/explorer
 
 # Build sources
 ENV NODE_ENV production
