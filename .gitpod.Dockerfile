@@ -3,12 +3,9 @@ FROM gitpod/workspace-full
 # Run explorer
 USER root
 
-RUN mkdir /home/explorer \      
-           cd /home/explorer \        
-           git clone https://github.com/blockstack/explorer.git
-
-#Set working directory
-WORKDIR /home/explorer
+RUN mkdir -p ~/explorer
+RUN cd /home/explorer
+RUN git clone https://github.com/blockstack/explorer.git
 
 # Installing dependencies
 RUN yarn
