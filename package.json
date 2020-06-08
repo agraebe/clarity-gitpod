@@ -15,16 +15,17 @@
     "test:watch": "mocha --watch"
   },
   "devDependencies": {
-    "@types/node": "^10",
-    "typescript": "^3.5.2",
-    "ts-node": "^8.2.0",
-    "chai": "^4.2.0",
     "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^10",
+    "chai": "^4.2.0",
     "mocha": "^6.1.4",
-    "@types/mocha": "^5.2.7"
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.2"
   },
   "dependencies": {
     "@blockstack/clarity": "^0.1.13",
-    "@blockstack/clarity-native-bin": "^0.1.13"
+    "@blockstack/clarity-native-bin": "^0.1.13",
+    "vscode-textmate": "^5.1.1"
   }
 }
