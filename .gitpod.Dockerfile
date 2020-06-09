@@ -11,6 +11,6 @@ RUN yarn
 
 # Setup start script
 RUN echo '#!/bin/bash\n\
-yarn --cwd ~/home/gitpod/explorer dev' > /home/gitpod/explorer/explorer_start.sh
+yarn --cwd /home/gitpod/explorer dev' > /home/gitpod/explorer/explorer_start.sh
 RUN chmod +x /home/gitpod/explorer/explorer_start.sh
 ENV PATH="/home/gitpod/explorer:$PATH"
