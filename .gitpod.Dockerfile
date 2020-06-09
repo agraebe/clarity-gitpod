@@ -4,8 +4,7 @@ FROM gitpod/workspace-full
 RUN git -C /home/gitpod clone https://github.com/blockstack/explorer.git
 
 ## Build sources
-RUN cd /home/gitpod/explorer
-RUN yarn
+RUN yarn --cwd /home/gitpod/explorer
 
 ## Setup start script
 RUN echo '#!/bin/bash\n\
@@ -20,11 +19,13 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-c
 RUN chmod +x /home/gitpod/docker/docker-compose
 ENV PATH="/home/gitpod/docker:$PATH"
 
+## Start docker deamon
+CMD ["service", "docker", "start"]
+
 # Clone Sidecar
 RUN git -C /home/gitpod clone https://github.com/blockstack/stacks-blockchain-sidecar.git
 
 ## Build sources
-RUN cd /home/gitpod/stacks-blockchain-sidecar
 RUN npm install --prefix /home/gitpod/stacks-blockchain-sidecar
 
 ## Setup start script
