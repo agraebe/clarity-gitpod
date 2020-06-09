@@ -32,7 +32,8 @@ WORKDIR /home/gitpod/stacks-blockchain-sidecar
 RUN npm install
 
 ## Setup start script
+RUN touch /home/gitpod/stacks-blockchain-sidecar/sidecar_start.sh
+RUN chmod 755 /home/gitpod/stacks-blockchain-sidecar/sidecar_start.sh
 RUN echo '#!/bin/bash\n\
 npm run --prefix /home/gitpod/stacks-blockchain-sidecar dev:integrated' > /home/gitpod/stacks-blockchain-sidecar/sidecar_start.sh
-RUN chmod +x /home/gitpod/stacks-blockchain-sidecar/sidecar_start.sh
 ENV PATH="/home/gitpod/stacks-blockchain-sidecar:$PATH"
