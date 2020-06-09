@@ -16,7 +16,7 @@ RUN chmod +x /home/gitpod/explorer/explorer_start.sh
 ENV PATH="/home/gitpod/explorer:$PATH"
 
 # Install docker compose
-USER sudo
+USER root
 RUN curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 RUN chmod +x /usr/local/bin/docker-compose
 USER gitpod
