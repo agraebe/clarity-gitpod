@@ -25,7 +25,7 @@ RUN git -C /home/gitpod clone https://github.com/blockstack/stacks-blockchain-si
 
 ## Build sources
 RUN cd /home/gitpod/stacks-blockchain-sidecar
-RUN npm install
+RUN npm install --prefix /home/gitpod/stacks-blockchain-sidecar
 
 ## Setup start script
 RUN echo '#!/bin/bash\n\
