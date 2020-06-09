@@ -8,6 +8,7 @@ ports:
 tasks:
   - init: yarn
     command: yarn test:watch
+  - command: explorer_start.sh
 
 vscode:
   extensions:

@@ -7,12 +7,10 @@ RUN git clone https://github.com/blockstack/explorer.git
 WORKDIR /home/gitpod/explorer
 
 # Build sources
-ENV MOCKNET_API_SERVER https://crashy-stacky.zone117x.com
-ENV TESTNET_API_SERVER https://sidecar.staging.blockstack.xyz
 RUN yarn
 
-# Expose port 3000
-EXPOSE 3000
-
-# Run build
-CMD [ "yarn", "dev" ]
+# Setup start script
+RUN echo '#!/bin/bash\n\
+yarn dev' > /home/gitpod/explorer/explorer_start.sh
+RUN chmod +x /home/gitpod/explorer/explorer_start.sh
+ENV PATH="/home/gitpod/explorer:$PATH"
