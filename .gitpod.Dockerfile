@@ -1,7 +1,7 @@
 FROM gitpod/workspace-full
 
 # Clone explorer
-RUN git clone -C /home/gitpod https://github.com/blockstack/explorer.git
+RUN git -C /home/gitpod clone https://github.com/blockstack/explorer.git
 
 ## Build sources
 RUN cd /home/gitpod/explorer
@@ -21,7 +21,7 @@ RUN chmod +x /home/gitpod/docker/docker-compose
 ENV PATH="/home/gitpod/docker:$PATH"
 
 # Clone Sidecar
-RUN git clone -C /home/gitpod https://github.com/blockstack/stacks-blockchain-sidecar.git
+RUN git -C /home/gitpod clone https://github.com/blockstack/stacks-blockchain-sidecar.git
 
 ## Build sources
 RUN cd /home/gitpod/stacks-blockchain-sidecar
