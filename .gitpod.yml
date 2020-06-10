@@ -10,7 +10,7 @@ tasks:
   - init: yarn
     command: yarn test:watch
   - command: explorer_start.sh
-  - command: ./home/gitpod/clarity-repl
+  - command: /home/gitpod/.cargo/bin/clarity-repl
   - command: sidecar_start.sh
 
 vscode:
