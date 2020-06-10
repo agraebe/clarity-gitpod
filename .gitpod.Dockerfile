@@ -35,7 +35,7 @@ RUN chmod +x /home/gitpod/stacks-blockchain-sidecar/sidecar_start.sh
 ENV PATH="/home/gitpod/stacks-blockchain-sidecar:$PATH"
 
 # Clone REPL
-RUN git -C /home/repl clone https://github.com/lgalabru/clarity-repl.git
+RUN git -C /home/gitpod clone https://github.com/lgalabru/clarity-repl.git
 
 ## Build sources
 RUN cargo install --bin clarity-repl --path .
