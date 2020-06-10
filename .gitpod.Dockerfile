@@ -39,7 +39,7 @@ RUN git -C /home/gitpod clone https://github.com/lgalabru/clarity-repl.git
 
 ## Install cargo
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-RUN . $HOME/.cargo/env
+SHELL ["/bin/bash", "-c", "source $HOME/.cargo/env"]
 
 ## Build sources
 RUN cargo install --bin clarity-repl --path .
