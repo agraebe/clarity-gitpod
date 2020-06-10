@@ -42,4 +42,4 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 SHELL ["/bin/bash", "-c", "source $HOME/.cargo/env"]
 
 ## Build sources
-SHELL ["/bin/bash", "-c", "cargo install --bin clarity-repl --path /home/gitpod/clarity-repl"]
+RUN cargo install --bin clarity-repl --path /home/gitpod/clarity-repl
