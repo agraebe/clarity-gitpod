@@ -37,5 +37,8 @@ ENV PATH="/home/gitpod/stacks-blockchain-sidecar:$PATH"
 # Clone REPL
 RUN git -C /home/gitpod clone https://github.com/lgalabru/clarity-repl.git
 
+## Install cargo
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 ## Build sources
 RUN cargo install --bin clarity-repl --path .
