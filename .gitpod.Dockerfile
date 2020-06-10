@@ -42,7 +42,7 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 ## Setup start script
 RUN echo '#!/bin/bash\n\
-cargo install --bin clarity-repl --path /home/gitpod/clarity-repl && clarity-repl' > /home/gitpod/clarity-repl
+cargo install --bin clarity-repl --path /home/gitpod/clarity-repl && clarity-repl' > /home/gitpod/clarity-repl/repl_init.sh
 RUN chmod +x /home/gitpod/clarity-repl/repl_init.sh
 ENV PATH="/home/gitpod/clarity-repl:$PATH"
 
