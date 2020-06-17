@@ -2,8 +2,8 @@ FROM quay.io/blockstack/blockstack-core:latest as corenode
 
 FROM gitpod/workspace-postgres
 
+# Copy stacks-node binary
 COPY --from=corenode /bin/stacks-node /bin/
-
 
 # Clone explorer
 RUN git -C /home/gitpod clone https://github.com/blockstack/explorer.git
@@ -47,8 +47,6 @@ ENV NODE_ENV development
 
 # Stacks-node env vars
 ENV STACKS_EVENT_OBSERVER http://127.0.0.1:3700/
-
-RUN echo 
 
 # Clone REPL
 RUN git -C /home/gitpod clone https://github.com/lgalabru/clarity-repl.git
