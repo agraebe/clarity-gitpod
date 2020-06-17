@@ -21,8 +21,8 @@ ENV PATH="/home/gitpod/explorer:$PATH"
 RUN git -C /home/gitpod clone https://github.com/blockstack/stacks-blockchain-sidecar.git
 
 ## Build sources
-RUN npm install --prefix /home/gitpod/stacks-blockchain-sidecar
-RUN npm build /home/gitpod/stacks-blockchain-sidecar
+RUN npm --prefix /home/gitpod/stacks-blockchain-sidecar install
+RUN npm --prefix /home/gitpod/stacks-blockchain-sidecar run build
 
 ## Setup start script
 RUN echo '#!/bin/bash\n\
