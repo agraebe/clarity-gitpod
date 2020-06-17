@@ -31,11 +31,11 @@ RUN chmod +x /home/gitpod/stacks-blockchain-sidecar/sidecar_start.sh
 ENV PATH="/home/gitpod/stacks-blockchain-sidecar:$PATH"
 
 ## Sidecar env vars
-ENV PG_HOST postgres
+ENV PG_HOST 127.0.0.1
 ENV PG_PORT 5432
-ENV PG_USER postgres
+ENV PG_USER gitpod
 ENV PG_PASSWORD postgres
-ENV PG_DB stacks_core_sidecar
+ENV PG_DATABASE postgres
 ENV STACKS_SIDECAR_EVENT_PORT 3700
 ENV STACKS_SIDECAR_EVENT_HOST http://0.0.0.0
 ENV STACKS_SIDECAR_API_PORT 3999
