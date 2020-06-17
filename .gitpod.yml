@@ -11,7 +11,8 @@ tasks:
     command: yarn test:watch
   - command: explorer_start.sh
   - command: repl_init.sh
-  # - command: sidecar_start.sh
+  - command: sidecar_start.sh
+  - command: stacks-node start --config=/workspace/Stacks-dev.toml
 
 vscode:
   extensions:
