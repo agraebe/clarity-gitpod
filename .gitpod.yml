@@ -4,7 +4,10 @@ image:
 ports:
   # Explorer port
   - port: 3000
-  - port: 3999
+    onOpen: open-preview
+  # do not ask to open other ports
+  - port: 3700-20444
+    onOpen: ignore
 
 tasks:
   - init: yarn
